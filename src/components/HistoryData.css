@@ -1,0 +1,28 @@
+.history-data {
+  margin-top: 3rem;
+}
+.history-data ul {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 10px;
+  list-style-type: none;
+}
+.history-data ul li {
+  transition: 300ms ease;
+}
+.history-data ul li:hover {
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+.view-details-button {
+  float: right;
+  margin-top: -2rem;
+}
+.filter-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+}

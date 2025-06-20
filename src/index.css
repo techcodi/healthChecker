@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #007c91;
+  --secondary-color: #ade8e6;
+  --background-color: #f5f7fa;
+  --text-color: #333;
+  --border-color: #e0e0e0;
+  --color: #fff;
+  --hover-color: #005f6b;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: 90%;
+  transition: scroll 0.3s ease;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input {
+  outline: none;
+  font-size: 16px;
+}
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: inherit;
+}
