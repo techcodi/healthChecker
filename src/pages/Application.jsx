@@ -8,7 +8,7 @@ import "./Application.css";
 import { useState } from "react";
 function Application() {
   const { user, loading } = useAuth();
-  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(true);
 
   if (loading) return <Spinner />;
   if (!user) return <Redirect />;

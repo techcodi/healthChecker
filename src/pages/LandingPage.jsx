@@ -48,16 +48,16 @@ function LandingPage() {
             <ul>
               <li>
                 {" "}
-                <a href="how_it_works">How it works</a>{" "}
+                <a href="#how_it_works">How it works</a>{" "}
               </li>
               <li>
-                <a href="">Features</a>
+                <a href="#feature">Features</a>
               </li>
               <li>
                 <a href="">Pricing</a>
               </li>
               <li>
-                <a href="">Contact</a>
+                <a href="#feature">Contact</a>
               </li>
             </ul>
             <Link to="/auth" className="auth-btn">
@@ -77,16 +77,16 @@ function LandingPage() {
           <div className="mobile-nav">
             <ul>
               <li>
-                <a href="how_it_works">How it works</a>{" "}
+                <a href="#how_it_works">How it works</a>{" "}
               </li>
               <li>
-                <a href="">Features</a>
+                <a href="#feature">Features</a>
               </li>
               <li>
                 <a href="">Pricing</a>
               </li>
               <li>
-                <a href="">Contact</a>
+                <a href="#feature">Contact</a>
               </li>
 
               <Link to="/auth" className="auth-btn">
@@ -112,7 +112,7 @@ function LandingPage() {
       </header>
 
       {/* HOW IT WORKS SECTION */}
-      <section className="how_it_works" id="how_it_works">
+      <section id="how_it_works" className="how_it_works">
         <div className="how_container">
           <h2>How CareLens works</h2>
           <p className="p">
@@ -135,7 +135,7 @@ function LandingPage() {
       </section>
 
       {/* CHECKING */}
-      <section className="checking">
+      <section id="feature" className="checking">
         <div className="checking_container">
           <h2>AI Symptom Checker</h2>
           <p>

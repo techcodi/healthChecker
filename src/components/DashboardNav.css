@@ -49,16 +49,17 @@
 }
 .sidebar-toggle-btn {
   display: none;
-  background: #007c91;
+
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
   margin-right: 1rem;
-  color: #fff;
+  color: #007c91;
 }
 
 @media screen and (max-width: 400px) {
-  .dashboard-logo {
+  .dashboard-nav h3 {
     display: none;
   }
 }
@@ -66,7 +67,7 @@
 @media screen and (max-width: 900px) {
   .sidebar-toggle-btn {
     display: block;
-    font-size: 1.2rem;
+    font-size: 2rem;
     margin-right: 0.5rem;
   }
 }

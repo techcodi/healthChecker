@@ -18,6 +18,7 @@ html {
   background-color: var(--background-color);
   font-size: 90%;
   transition: scroll 0.3s ease;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;

@@ -9,11 +9,7 @@ function DashboardNav({ onToggleSidebar, sideBarOpen }) {
   return (
     <div className="dashboard-nav">
       <div style={{ display: "flex", alignItems: "center" }}>
-        <button
-          className="sidebar-toggle-btn"
-          onClick={onToggleSidebar}
-          aria-label={sideBarOpen ? "Close sidebar" : "Open sidebar"}
-        >
+        <button className="sidebar-toggle-btn" onClick={onToggleSidebar}>
           {sideBarOpen ? <IoMdClose /> : <IoMdMenu />}
         </button>
 

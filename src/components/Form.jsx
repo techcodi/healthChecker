@@ -7,19 +7,22 @@ import { FcApproval } from "react-icons/fc";
 import { IoWarning } from "react-icons/io5";
 import { BsSendFill } from "react-icons/bs";
 import { FaMicrophone } from "react-icons/fa";
-
 import "./Form.css";
 import PrimarySpinner from "../ui/PrimarySpinner.jsx";
+import Redirect from "./Redirect.jsx";
+import Spinner from "../ui/Spinner.jsx";
 function Form() {
+  const { user, loading } = useAuth();
   const [response, setResponse] = useState(null);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [nearbyPlaces, setNearbyPlaces] = useState([]);
-  const [nearbyPharmacies, setNearbyPharmacies] = useState([]);
   const [isRecording, setIsRecording] = useState(false);
-  const { user } = useAuth();
+
   const { register, handleSubmit, reset, setValue } = useForm();
 
+  if (!user) return <Redirect />;
+  if (loading) return <Spinner />;
   // Voice recoder
 
   const SpeechRecognition =
@@ -88,7 +91,7 @@ function Form() {
                 const { latitude, longitude } = position.coords;
                 resolve({ latitude, longitude });
               },
-              (err) => reject(new Error("Unable to retrieve location."))
+              (error) => reject(new Error("Unable to retrieve location."))
             );
           }
         });
@@ -116,6 +119,7 @@ function Form() {
           "Could not get your location. Your check will still be saved."
         );
       }
+
       const { error: insertError } = await supabase
         .from("symptom_checks")
         .insert({
