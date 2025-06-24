@@ -100,7 +100,6 @@ function Form() {
         const location = await getLocation();
         latitude = location.latitude;
         longitude = location.longitude;
-        console.log(location);
 
         const radius = 0.05; // roughly 2km bounding box
         const viewbox = `${longitude - radius},${latitude + radius},${
@@ -112,8 +111,6 @@ function Form() {
         );
         const nearby = await responseApi.json();
         setNearbyPlaces(nearby);
-
-        console.log("Nearby places:", nearby);
       } catch (locationErr) {
         setError(
           "Could not get your location. Your check will still be saved."
