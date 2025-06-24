@@ -8,7 +8,7 @@ function DashboardNav({ onToggleSidebar, sideBarOpen }) {
   const [showProfile, setShowProfile] = useState(false);
   return (
     <div className="dashboard-nav">
-      <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="nav-logo-btn">
         <button className="sidebar-toggle-btn" onClick={onToggleSidebar}>
           {sideBarOpen ? <IoMdClose /> : <IoMdMenu />}
         </button>
